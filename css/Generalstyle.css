@@ -3,7 +3,6 @@ body,html{
 	padding:0;
 	background:whitesmoke;
 }
-
 h1,h2,h3,h4,h5,h6,p,i,ul,li{
 	font-family: Helvetica, sans-serif;
 	font-weight:300;
@@ -11,4 +10,18 @@ h1,h2,h3,h4,h5,h6,p,i,ul,li{
 
 #TextContent{
 	margin:30px;
+}
+/* Create two equal columns that floats next to each other */
+.cell {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
