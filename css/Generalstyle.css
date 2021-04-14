@@ -25,3 +25,14 @@ h1,h2,h3,h4,h5,h6,p,i,ul,li{
     display: table;
     clear: both;
 }
+@media only screen and (max-width: 600px) {
+    .cell {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .cell {
+        width: 25%;
+    }
+}
