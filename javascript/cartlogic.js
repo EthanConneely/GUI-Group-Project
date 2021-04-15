@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //JustForTestingPurposes
 localStorage.setItem('Cart','01,03,05');
 
@@ -45,3 +46,16 @@ if(localStorage.getItem('Cart') == null){
 		i++;
 	}
 }
+=======
+if (sessionStorage.getItem('Cart') == null)
+{
+    EmptyCartAlert = document.createElement('p');
+    EmptyCartAlert.innerHTML = 'You have no products in your cart - return to home page to add products to cart.';
+    EmptyCartAlert.setAttribute('id', 'EmptyCartAlert');
+    document.getElementById('CartContents').appendChild(EmptyCartAlert);
+}
+else
+{
+    alert('Customer has products in cart.');
+}
+>>>>>>> 115cab9bf4bf92aab4c338bd3f5fe10e191970e1

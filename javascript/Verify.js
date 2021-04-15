@@ -1,5 +1,6 @@
 //Javascript Verify Script
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 if (localStorage.getItem("username") === null) {
   alert('User is not logged in');
@@ -39,3 +40,23 @@ function LoginQuery(username,password){
 	
 >>>>>>> Stashed changes
 }
+=======
+if (localStorage.getItem("username") === null)
+{
+    alert('User is not logged in');
+    location.href = 'login.html';
+    //remove only logged in content
+}
+else
+{
+    document.getElementById('UsernameTag').innerHTML = 'Welcome, ' + localStorage.getItem('username');
+    document.getElementById('UserTag').innerHTML = localStorage.getItem('username')[0];
+}
+
+//Logout Function
+function LogoutFunction()
+{
+    localStorage.clear();
+    location.href = 'login.html';
+}
+>>>>>>> 115cab9bf4bf92aab4c338bd3f5fe10e191970e1
