@@ -1,5 +1,4 @@
 //Javascript Verify Script
-//localStorage.setItem('username','Caolán is the best');
 
 if (localStorage.getItem("username") === null) {
   alert('User is not logged in');

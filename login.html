@@ -17,6 +17,13 @@
 </div>
 
 <script>
+if (localStorage.getItem("username") === null) {
+//user is not logged in
+}else{
+	location.href = 'index.html';
+}
+
+
 function LoginFunction()
 {
     console.log('Function Started');
