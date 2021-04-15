@@ -1,10 +1,3 @@
-// Import the list of products sold in the store (EC)
-import
-{
-    Products
-}
-from "./ProductList.js";
-
 // Get the product grid element using DOM (EC)
 var gridDiv = document.getElementById("ProductGrid");
 
