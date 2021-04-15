@@ -1,10 +1,16 @@
 //Javascript Verify Script
-//sessionStorage.setItem('username','Caolán is the best');
+//localStorage.setItem('username','Caolán is the best');
 
-if (sessionStorage.getItem("username") === null) {
+if (localStorage.getItem("username") === null) {
   alert('User is not logged in');
   location.href = 'login.html';
   //remove only logged in content
 }else{
-	document.getElementById('UsernameTag').innerHTML = 'Welcome, ' + sessionStorage.getItem('username');
+	document.getElementById('UsernameTag').innerHTML = 'Welcome, ' + localStorage.getItem('username');
+}
+
+//Logout Function
+function LogoutFunction(){
+	localStorage.clear();
+	location.href = 'login.html';
 }

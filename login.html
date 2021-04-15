@@ -49,7 +49,8 @@ function LoginFunction(){
 			if(AcceptedUsers[i][1] == password){
 				//Password Exists
 				//Accepted
-				sessionStorage.setItem('username',AcceptedUsers[i][0]);
+				localStorage.setItem('username',AcceptedUsers[i][0]);
+				location.href = 'index.html';
 			}
 		
 		}
