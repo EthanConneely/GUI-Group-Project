@@ -7,6 +7,7 @@ if (localStorage.getItem("username") === null) {
   //remove only logged in content
 }else{
 	document.getElementById('UsernameTag').innerHTML = 'Welcome, ' + localStorage.getItem('username');
+	document.getElementById('UserTag').innerHTML = localStorage.getItem('username')[0];
 }
 
 //Logout Function
