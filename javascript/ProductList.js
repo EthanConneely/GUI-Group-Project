@@ -1,4 +1,4 @@
-var Products = [
+Products = [
     [1, 'images/Temp.png', 'First Product', 'This is the description of the first product', '€52.00'],
     [2, 'images/Temp.png', 'Second Product', 'This is the description of the second product', '€62.00'],
     [3, 'images/Temp.png', 'Third Product', 'This is the description of the third product', '€72.00'],
