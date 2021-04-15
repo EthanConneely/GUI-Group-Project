@@ -1,4 +1,5 @@
 # GuiGroupProject
+
 # TODO
 
 -   Add basket
@@ -26,9 +27,4 @@
 -   [ ] Access and change styling through the DOM
 
 
--   [ ] Demonstrate the use of events – both inline (HTML) and DOM level 2 event listeners.
-
-
-
-
-
+-   [x] Demonstrate the use of events – both inline (HTML) and DOM level 2 event listeners.
