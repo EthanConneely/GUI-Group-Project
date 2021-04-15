@@ -1,16 +1,16 @@
-#LoginDiv{
-	background:white;
-	width:50%;
-	text-align:center;
-	margin-left:25%;
-	margin-top:10%;
-	padding:20px;
+#LoginDiv {
+    background: white;
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 10%;
+    padding: 20px;
 }
 
-#input{
-	margin:10px;
-	padding:10px;
-	text-align:center;
-	font-variant-caps:all-petite-caps;
-	font-size:20px;
+#input {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    font-variant-caps: all-petite-caps;
+    font-size: 20px;
 }
