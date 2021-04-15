@@ -1,16 +1,18 @@
-body,html{
-	margin:0;
-	padding:0;
-	background:whitesmoke;
-}
-h1,h2,h3,h4,h5,h6,p,i,ul,li{
-	font-family: Helvetica, sans-serif;
-	font-weight:300;
+body, html {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
 }
 
-#TextContent{
-	margin:30px;
+h1, h2, h3, h4, h5, h6, p, i, ul, li {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
 }
+
+#TextContent {
+    margin: 30px;
+}
+
 /* Create two equal columns that floats next to each other */
 .cell {
     float: left;
@@ -25,6 +27,7 @@ h1,h2,h3,h4,h5,h6,p,i,ul,li{
     display: table;
     clear: both;
 }
+
 @media only screen and (max-width: 600px) {
     .cell {
         width: 100%;

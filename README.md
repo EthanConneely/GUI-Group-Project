@@ -1,4 +1,5 @@
 # GuiGroupProject
+
 # TODO
 
 -   Add basket
@@ -27,8 +28,3 @@
 
 
 -   [ ] Demonstrate the use of events – both inline (HTML) and DOM level 2 event listeners.
-
-
-
-
-
