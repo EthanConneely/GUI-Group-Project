@@ -1,38 +1,33 @@
-body,html{
-	margin:0;
-	padding:0;
-	background:whitesmoke;
-}
-h1,h2,h3,h4,h5,h6,p,i,ul,li{
-	font-family: Helvetica, sans-serif;
-	font-weight:300;
+body, html {
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
 }
 
-#TextContent{
-	margin:30px;
+h1, h2, h3, h4, h5, h6, p, i, ul, li {
+    font-family: Helvetica, sans-serif;
+    font-weight: 300;
 }
-/* Create two equal columns that floats next to each other */
+
+#TextContent {
+    margin: 30px;
+}
+
 .cell {
+    width: 25%;
     float: left;
-    width: 50%;
     box-sizing: border-box;
     padding: 10px;
 }
 
-/* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 768px) {
     .cell {
         width: 100%;
-    }
-}
-
-@media only screen and (min-width: 600px) {
-    .cell {
-        width: 25%;
     }
 }
