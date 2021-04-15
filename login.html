@@ -4,78 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/HeaderStyle.css">
+    <link rel="stylesheet" href="css/Footer.css">
     <link rel="stylesheet" href="css/Generalstyle.css">
-    <link rel="stylesheet" href="css/LoginStyle.css">
 </head>
 
-<div id="LoginDiv">
-
-    <input type="email" class="input" id="emailLogin" placeholder="Email" required> <br />
-    <input type="password" class="input" id="PasswordLogin" placeholder="password" required> <br />
-    <input type="submit" class="input" value="Login" onclick="LoginFunction()"> <br />
-</div>
-
-<script>
-if (localStorage.getItem("username") === null) {
-//user is not logged in
-}else{
-	location.href = 'index.html';
-}
-
-
-function LoginFunction()
-{
-    console.log('Function Started');
-    email = document.getElementById('emailLogin').value;
-    password = document.getElementById('PasswordLogin').value;
-
-    console.log(email);
-    console.log(password);
-
-
-    if (email == '')
-    {
-        alert('email empty');
-        //return;
-    }
-
-    if (password == '')
-    {
-        alert('password empty');
-        //return;
-    }
-
-
-
-    AcceptedUsers = [
-        ['caolanmichaelmaguire@gmail.com', '123'],
-        ['ethan', '345']
-    ];
-
-
-
-    var i;
-    for (i = 0; i < AcceptedUsers.length; i++)
-    {
-        if (AcceptedUsers[i][0] == email)
-        {
-            //User Exists
-            if (AcceptedUsers[i][1] == password)
-            {
-                //Password Exists
-                //Accepted
-                localStorage.setItem('username', AcceptedUsers[i][0]);
-                location.href = 'index.html';
-            }
-
-        }
-    }
-}
-
-</script>
-
 <body>
+
+    <div id="NewHeader">
+
+        <!--LOGO-->
+        <img src="images/guiprojectlogo.png" id="Logo" />
+        <!--LOGO-->
+
+        <div id="dropdown">
+            <h1 id="UserTag" class="dropbtn" onclick="myFunction()"> </h1>
+            <div id="myDropdown" class="dropdown-content">
+                <h3 id="userDropdownMessage">You are logged in as USERNAME</h3>
+                <hr>
+                <a onclick="LogoutFunction();">Log out</a>
+            </div>
+        </div>
+
+        <img src="images/Basket.png" id="BasketImage" onclick="location.href = 'login.html';" />
+    </div>
+    <br /><br /><br /><br /><br /><br />
+
+    <h1 id="UsernameTag"></h1>
+
+    <hr>
+
+    <!-- Product container is filled from ProductDisplay (EC)-->
+    <div id="ProductGrid">
+    </div>
+
+    <!-- Footer -->
+    <footer id="NewFooter">
+        <h1>End Content</h1>
+    </footer>
+
+    <script src="javascript/ProductList.js"></script>
+    <script src="javascript/Verify.js"></script>
+
+    <!-- ProductDisplay (EC) -->
+    <script src="javascript/ProductDisplay.js"></script>
+    <!-- LoginDropdown (EC) -->
+    <script src="javascript/UserDropdown.js"></script>
 </body>
 
 </html>

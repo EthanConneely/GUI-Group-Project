@@ -1,25 +1,25 @@
-#RemoveItemButton{
-	background:red;
-	padding:10px;
-	color:white;
-	font-weight:900;
-	border-radius:50%;
-	width:20px;
-	height:20px;
-	text-align:center;
+#RemoveItemButton {
+    background: red;
+    padding: 10px;
+    color: white;
+    font-weight: 900;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
 }
 
-#CartPreImage{
-	width:50px;
-	height:50px;
-	margin:0;
-	border-radius:5px;
+#CartPreImage {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    border-radius: 5px;
 }
 
-#BasketProductList{
-	margin:10px;
-	padding:0px;
-	background:whitesmoke;
+#BasketProductList {
+    margin: 10px;
+    padding: 0px;
+    background: whitesmoke;
 }
 
 body, html {
