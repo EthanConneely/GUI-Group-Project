@@ -19,6 +19,7 @@
     height: 50px;
     width: 50px;
     margin: 20px;
+    cursor: pointer;
 }
 
 #UserTag {
