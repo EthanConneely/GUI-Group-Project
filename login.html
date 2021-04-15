@@ -10,12 +10,52 @@
 </head>
 
 <div id="LoginDiv">
-	<form>
-		<input type="email" id="input" placeholder="Email" required> <br/>
-		<input type="password" id="input" placeholder="password" required> <br/>
-		<input type="submit" id="input" value="Login"> <br/>
-	</form>
+	
+		<input type="email" class="input" id="emailLogin" placeholder="Email" required> <br/>
+		<input type="password" class="input" id="PasswordLogin" placeholder="password" required> <br/>
+		<input type="submit" class="input" value="Login" onclick="LoginFunction()"> <br/>
 </div>
+
+<script>
+function LoginFunction(){
+	console.log('Function Started');
+	email = document.getElementById('emailLogin').value;
+	password = document.getElementById('PasswordLogin').value;
+	
+	console.log(email);
+	console.log(password);
+	
+	
+	if(email == ''){
+		alert('email empty');
+		//return;
+	}
+	
+	if(password == ''){
+		alert('password empty');
+		//return;
+	}
+	
+	
+	
+	AcceptedUsers = [['caolanmichaelmaguire@gmail.com','123'],['ethan','345']];
+	
+	
+	
+	var i;
+	for(i = 0; i < AcceptedUsers.length; i++){
+		if(AcceptedUsers[i][0] == email){
+			//User Exists
+			if(AcceptedUsers[i][1] == password){
+				//Password Exists
+				//Accepted
+				sessionStorage.setItem('username',AcceptedUsers[i][0]);
+			}
+		
+		}
+	}
+}
+</script>
 
 <body>
 </body>
