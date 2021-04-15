@@ -9,8 +9,8 @@
 
 -   [ ] Use at least 3 arrays – These arrays can be used for anything you like. For example, you could use an array for 
 
-    storing the image names which could be referenced by the slideshow. Another array could be used for storing 
-    product details.
+-   [ ]    storing the image names which could be referenced by the slideshow. Another array could be used for storing product details.
+
 
 -   [ ]   Use session storage for web storage in the browser – this would be useful for a basket to store products 
 
