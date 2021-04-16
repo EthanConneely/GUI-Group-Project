@@ -1,5 +1,5 @@
 // Login details (EC) (CM)
 LoginDetails = [
-    ['test@test.com', 'test'],
+    ['Econn50@outlook.com', 'pass'],
     ['test123@test.com', 'test123']
 ];
