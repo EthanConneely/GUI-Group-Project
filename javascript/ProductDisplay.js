@@ -69,7 +69,7 @@ Products.forEach(product =>
 // Add item to the basket using an id store in Session storage (EC)
 function addItemToBasket(id)
 {
-    let cart = sessionStorage.getItem("cart");
+    var cart = sessionStorage.getItem("cart");
     if (cart === null)
     {
         sessionStorage.setItem("cart", id);

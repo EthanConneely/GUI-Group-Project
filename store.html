@@ -3,9 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Home</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/HeaderStyle.css">
     <link rel="stylesheet" href="css/Footer.css">
     <link rel="stylesheet" href="css/Generalstyle.css">
@@ -16,15 +18,15 @@
     <div id="NewHeader">
 
         <!--LOGO-->
-        <img src="images/guiprojectlogo.png" id="Logo" />
+        <img src="images/Logo.png" id="Logo" />
         <!--LOGO-->
 
         <div id="dropdown">
             <h1 id="UserTag" class="dropbtn" onclick="myFunction()"> </h1>
             <div id="myDropdown" class="dropdown-content">
-                <h3 id="userDropdownMessage">You are logged in as USERNAME</h3>
+                <h3 id="userDropdownMessage">ERROR</h3>
                 <hr>
-                <a onclick="LogoutFunction();">Log out</a>
+                <a class="clickable" onclick="logout();">Log out</a>
             </div>
         </div>
 
@@ -46,12 +48,12 @@
     </footer>
 
     <script src="javascript/ProductList.js"></script>
-    <script src="javascript/Verify.js"></script>
 
     <!-- ProductDisplay (EC) -->
     <script src="javascript/ProductDisplay.js"></script>
     <!-- LoginDropdown (EC) -->
     <script src="javascript/UserDropdown.js"></script>
+    <script src="javascript/LoginHandling.js"></script>
 </body>
 
 </html>

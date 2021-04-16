@@ -3,78 +3,47 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/Generalstyle.css">
     <link rel="stylesheet" href="css/LoginStyle.css">
 </head>
 
-<div id="LoginDiv">
-
-    <input type="email" class="input" id="emailLogin" placeholder="Email" required> <br />
-    <input type="password" class="input" id="PasswordLogin" placeholder="password" required> <br />
-    <input type="submit" class="input" value="Login" onclick="LoginFunction()"> <br />
-</div>
-
-<script>
-    if (localStorage.getItem("username") === null)
-    {
-        //user is not logged in
-    }
-    else
-    {
-        location.href = 'store.html';
-    }
-
-
-    function LoginFunction()
-    {
-        console.log('Function Started');
-        email = document.getElementById('emailLogin').value;
-        password = document.getElementById('PasswordLogin').value;
-
-        console.log(email);
-        console.log(password);
-
-
-        if (email == '')
-        {
-            alert('email empty');
-            //return;
-        }
-
-        if (password == '')
-        {
-            alert('password empty');
-            //return;
-        }
-
-        AcceptedUsers = [
-            ['caolanmichaelmaguire@gmail.com', '123'],
-            ['ethan', '345']
-        ];
-
-        var i;
-        for (i = 0; i < AcceptedUsers.length; i++)
-        {
-            if (AcceptedUsers[i][0] == email)
-            {
-                //User Exists
-                if (AcceptedUsers[i][1] == password)
-                {
-                    //Password Exists
-                    //Accepted
-                    localStorage.setItem('username', AcceptedUsers[i][0]);
-                    location.href = 'index.html';
-                }
-
-            }
-        }
-    }
-
-</script>
-
 <body>
+    <!-- Logo and Title for login (EC) -->
+    <div>
+        <div id="LoginLogo">
+            <img src="images/Logo.png" alt="">
+        </div>
+        <h2 id="LoginTitle">Sign in to <br> Caolán and Ethan's Store</h2>
+
+        <!-- Login Form for signing into the site (EC) -->
+        <form id="LoginForm" onsubmit="submit(event)">
+            <!-- Email field (EC) -->
+            <label for="Email">Email Address</label>
+            <input id="Email" type="email" class="InputField" required>
+
+            <!-- Password field (EC) -->
+            <div class="FieldSpacing" id="PasswordFieldContainer">
+                <label for="Password">Password</label>
+                <p id="ForgotPassword" onclick="forgotPassword()">Forgot password?</p>
+            </div>
+            <input id="Password" type="password" class="InputField" required> <br>
+
+            <!-- Sign in button (EC) -->
+            <input type="submit" value="Sign in" onclick="login()" class="InputButton FieldSpacing">
+        </form>
+    </div>
+
 </body>
+
+<!-- Include credentials for forgot password (EC) -->
+<script src="javascript/Credentials.js"></script>
+
+<!-- Login handling and form submission (EC) -->
+<script src="javascript/LoginHandling.js"></script>
 
 </html>
