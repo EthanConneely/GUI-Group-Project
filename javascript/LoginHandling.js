@@ -1,10 +1,22 @@
+let relativePath = location.pathname.substr(0, (location.pathname).lastIndexOf('/') + 1);
+if (relativePath == "")
+{
+    relativePath = location.pathname;
+}
+
+if (location.pathname.includes("index.html"))
+{
+    location.pathname = relativePath;
+}
+
+
 // Already logged in (EC)
 if (sessionStorage.Email != null && sessionStorage.Password != null)
 {
     // Already logged in redirect and on the login page redirect to store (EC)
-    if (location.pathname == "/" || location.pathname == "/index.html")
+    if (location.pathname == relativePath)
     {
-        location.pathname = "store.html";
+        location.pathname = relativePath + "store.html";
     }
     else
     {
@@ -27,9 +39,9 @@ if (sessionStorage.Email != null && sessionStorage.Password != null)
 else
 {
     // We are not logged in and we are not on the login page redirect to login page (EC)
-    if (location.pathname != "/" && location.pathname != "/index.html")
+    if (location.pathname != relativePath)
     {
-        location.pathname = "index.html";
+        location.pathname = relativePath;
     }
 }
 
@@ -59,7 +71,7 @@ function login()
     {
         if (LoginDetails[i][0] == email.value)
         {
-            // Store Login email (EC)
+            // Found email (EC)
             foundValidEmail = true;
             break;
         }
@@ -84,7 +96,8 @@ function login()
             email.setCustomValidity("");
             sessionStorage.setItem("Email", email.value);
             sessionStorage.setItem("Password", password.value);
-            location.pathname = "store.html";
+            location.pathname = relativePath + "store.html";
+            return;
         }
         else
         {
@@ -110,5 +123,5 @@ function logout()
 {
     // Clear session and redirect to login page (EC)
     sessionStorage.clear();
-    location.pathname = "index.html";
+    location.pathname = relativePath + "index.html";
 }

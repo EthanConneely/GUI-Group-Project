@@ -1,11 +1,13 @@
 #Logo {
-    width: 175px;
-    margin: 0;
+    position: absolute;
+    height: 90%;
+    left: 50%;
+    right: 50%;
 }
 
 #NewHeader {
     top: 0;
-    position: fixed;
+    position: relative;
     background: #47A4E3;
     color: white;
     width: 100%;

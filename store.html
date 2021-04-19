@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Home</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="css/HeaderStyle.css">
     <link rel="stylesheet" href="css/Footer.css">
@@ -17,10 +17,10 @@
 
     <div id="NewHeader">
 
-        <!--LOGO-->
+        <!--LOGO (CM)-->
         <img src="images/Logo.png" id="Logo" />
-        <!--LOGO-->
 
+        <!-- User login dropdown (EC) -->
         <div id="dropdown">
             <h1 id="UserTag" class="dropbtn" onclick="myFunction()"> </h1>
             <div id="myDropdown" class="dropdown-content">
@@ -30,7 +30,8 @@
             </div>
         </div>
 
-        <img src="images/Basket.png" id="BasketImage" onclick="location.href = 'cart.html';" />
+        <!-- Button to redirect to the cart (EC) -->
+        <img src="images/Basket.png" id="BasketImage" onclick="location.pathname=location.pathname.replace('store.html','cart.html')" />
     </div>
     <br /><br /><br /><br /><br /><br />
 
