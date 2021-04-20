@@ -9,10 +9,16 @@ gridDiv.appendChild(row);
 // intialize the grid (EC)
 var cellCount = 0;
 
-
 // Add all products to page (EC)
-Products.forEach(product =>
+for (let i = 0; i < Products.length; i++)
 {
+    const product = Products[i];
+
+    if (product[4] != "grid")
+    {
+        continue;
+    }
+
     // Start a new row every 4 cells (EC)
     if (cellCount >= 4)
     {
@@ -29,20 +35,20 @@ Products.forEach(product =>
     // Create Image (EC)
     var image = document.createElement("img");
     image.className = "productImage";
-    image.src = product[1];
+    image.src = product[0];
 
     // Create Title header (EC)
     var title = document.createElement("h2");
-    title.innerText = product[2];
+    title.innerText = product[1];
 
     // Create Discription paragraph (EC)
     var discription = document.createElement("p");
-    discription.innerText = product[3];
+    discription.innerText = product[2];
 
     // Create Price paragraph (EC)
     var price = document.createElement("h3");
     price.className = "productPrice";
-    price.innerText = product[4];
+    price.innerText = product[3];
 
     // Create add to basket button (EC)
     var addToBasket = document.createElement("button");
@@ -51,7 +57,7 @@ Products.forEach(product =>
 
     addToBasket.addEventListener("click", function()
     {
-        addItemToBasket(product[0])
+        addItemToBasket(i)
     }, false);
 
     // Add all emements to the cell and add the cell to the row (EC)
@@ -64,7 +70,7 @@ Products.forEach(product =>
 
     // Keep track of the current cells in a row (EC)
     cellCount++;
-});
+}
 
 // Add item to the basket using an id store in Session storage (EC)
 function addItemToBasket(id)

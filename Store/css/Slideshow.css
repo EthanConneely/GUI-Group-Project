@@ -1,0 +1,108 @@
+#SlideshowContainer {
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+    #SlideshowContainer {
+        width: 60%;
+    }
+
+    .pinLeft {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+
+    .pinRight {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+    }
+
+    .slideInfo {
+        padding: 10%;
+    }
+}
+
+
+@media only screen and (min-width: 1301px) {
+    #SlideshowContainer {
+        width: 50%;
+    }
+
+    .pinLeft {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+
+    .pinRight {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+    }
+
+    .slideInfo {
+        padding: 10%;
+    }
+}
+
+.slide {
+    width: 100%;
+    background-color: lightgray;
+    display: block;
+    border-radius: 10px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.slideImage {
+    display: inherit;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.slideInfo {
+    display: inherit;
+    width: 40%;
+    height: 100%;
+    padding: 0 5%;
+    float: right;
+}
+
+.slideText {
+    width: 100%;
+    display: inherit;
+    float: right;
+    text-align: center;
+}
+
+.pinLeft {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+}
+
+.pinRight {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+
+.slideButton {
+    outline: 0;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-style: none;
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+    font-weight: 900;
+}
+
+.slideButton:hover {
+    background-color: rgb(163, 163, 163);
+}

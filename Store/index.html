@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Store</title>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/Icon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/HeaderStyle.css">
     <link rel="stylesheet" href="../css/Footer.css">
     <link rel="stylesheet" href="../css/Generalstyle.css">
+    <link rel="stylesheet" href="css/Slideshow.css">
 </head>
 
 <body>
@@ -22,7 +23,7 @@
 
         <!-- User login dropdown (EC) -->
         <div id="dropdown">
-            <h1 id="UserTag" class="dropbtn" onclick="myFunction();"> </h1>
+            <h1 id="UserTag" class="dropbtn" onclick="showDropdown();"> </h1>
             <div id="myDropdown" class="dropdown-content">
                 <h3 id="userDropdownMessage">ERROR</h3>
                 <a class="clickable" onclick="logout();">Log out</a>
@@ -34,17 +35,16 @@
     </div>
 
     <!-- Spacing (CM) -->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br> <br> <br> <br> <br>
+
+    <!-- Slideshow (EC) -->
+    <div id="SlideshowContainer">
+        <button onclick="cycleLeft()" class="pinLeft slideButton">&#10094;</button>
+        <button onclick="cycleRight()" class="pinRight slideButton">&#10095;</button>
+    </div>
 
     <!-- Catagory title (EC) -->
     <h2 class="productCatagory">Shoes</h2>
-
-
-
 
     <!-- Product container is filled from ProductDisplay (EC)-->
     <div id="ProductGrid">
@@ -62,11 +62,14 @@
 
     <script src="../javascript/ProductList.js"></script>
 
-    <!-- ProductDisplay (EC) -->
-    <script src="../javascript/ProductDisplay.js"></script>
     <!-- LoginDropdown (EC) -->
     <script src="../javascript/UserDropdown.js"></script>
+
     <script src="../javascript/LoginHandling.js"></script>
+    <!-- ProductDisplay (EC) -->
+    <script src="javascript/ProductDisplay.js"></script>
+    <!-- Slideshow (EC) -->
+    <script src="javascript/Slideshow.js"></script>
 </body>
 
 </html>
