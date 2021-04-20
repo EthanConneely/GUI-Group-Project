@@ -1,7 +1,6 @@
 //JustForTestingPurposes
-localStorage.setItem('Cart', '01,03,05');
 
-if (localStorage.getItem('Cart') == null)
+if (sessionStorage.getItem('cart') == null)
 {
     EmptyCartAlert = document.createElement('p');
     EmptyCartAlert.innerHTML = 'You have no products in your cart - return to home page to add products to cart.';
@@ -10,79 +9,86 @@ if (localStorage.getItem('Cart') == null)
 }
 else
 {
-    BasketList = localStorage.getItem('Cart');
-    console.log(BasketList.split(','));
-
+    BasketList = sessionStorage.getItem('cart');
     AmountOfProducts = BasketList.split(',').length;
-
+	
     i = 0;
-    while (BasketList.split(',')[i] != undefined)
+    while(BasketList.split(',')[i] != undefined)
     {
-        //console.log(BasketList.split(',')[i]);
-        b = 0;
-        while (Products[b] != undefined)
-        {
-            //console.log(Products[b][0] + ' ||| ' + BasketList.split(',')[i]);
-            if (Products[b][0] == BasketList.split(',')[i])
-            {
-                console.log('Customer Bought ' + Products[b][2]);
+		console.log(BasketList.split(',')[i]);
+        
+		ProductNum = BasketList.split(',')[i];
+		
+		if(ProductNum != undefined){
+			
+			Row = document.createElement('tr');
+			Row.setAttribute('id','CartItem' + ProductNum);
+			RowItem = document.createElement('td');
 
-                //Create image, title, description, price // append to BasketProductList
+			ProductTitle = document.createElement('p');
+			ProductTitle.innerHTML = Products[ProductNum][1];
 
-                Row = document.createElement('tr');
-
-                RowItem = document.createElement('td');
-
-                ProductTitle = document.createElement('p');
-                ProductTitle.innerHTML = Products[b][2];
-
-                RowItem.appendChild(ProductTitle);
-                Row.appendChild(RowItem);
+			RowItem.appendChild(ProductTitle);
+			Row.appendChild(RowItem);
 
 
-                SecondRowItem = document.createElement('td');
+			SecondRowItem = document.createElement('td');
 
-                ProductPrice = document.createElement('p');
-                ProductPrice.innerHTML = Products[b][4];
+			ProductPrice = document.createElement('p');
+			ProductPrice.innerHTML = Products[ProductNum][3];
 
-                SecondRowItem.appendChild(ProductPrice);
-                Row.appendChild(SecondRowItem);
+			SecondRowItem.appendChild(ProductPrice);
+			Row.appendChild(SecondRowItem);
 
-                //Image of product
+			//Image of product
 
-                ThirdRowItem = document.createElement('td');
+			ThirdRowItem = document.createElement('td');
 
-                ProductImage = document.createElement('img');
-                ProductImage.setAttribute('src', Products[b][1]);
-                ProductImage.setAttribute('id', 'CartPreImage');
+			ProductImage = document.createElement('img');
+			ProductImage.setAttribute('src', Products[ProductNum][0]);
+			ProductImage.setAttribute('id', 'CartPreImage');
 
-                ThirdRowItem.appendChild(ProductImage);
-                Row.appendChild(ThirdRowItem);
+			ThirdRowItem.appendChild(ProductImage);
+			Row.appendChild(ThirdRowItem);
 
-                //Quantity
-                FourthRowItem = document.createElement('td');
+			//Quantity
+			FourthRowItem = document.createElement('td');
 
-                QuantityP = document.createElement('p');
-                QuantityP.innerHTML = '1';
+			QuantityP = document.createElement('p');
+			QuantityP.innerHTML = '1';
 
-                FourthRowItem.appendChild(QuantityP);
-                Row.appendChild(FourthRowItem);
+			FourthRowItem.appendChild(QuantityP);
+			Row.appendChild(FourthRowItem);
 
-                //RemoveButton
-                FifthRowItem = document.createElement('td');
+			//RemoveButton
+			FifthRowItem = document.createElement('td');
 
-                RemoveButton = document.createElement('p');
-                RemoveButton.setAttribute('id', 'RemoveItemButton');
-                RemoveButton.innerHTML = 'X';
+			RemoveButton = document.createElement('p');
+			RemoveButton.setAttribute('id', 'RemoveItemButton');
+			RemoveButton.setAttribute('onclick', 'RemoveItem("' + ProductNum + '")');
+			RemoveButton.innerHTML = 'X';
 
-                FifthRowItem.appendChild(RemoveButton);
-                Row.appendChild(FifthRowItem);
+			FifthRowItem.appendChild(RemoveButton);
+			Row.appendChild(FifthRowItem);
 
-                document.getElementById('BasketProductList').appendChild(Row);
+			document.getElementById('BasketProductList').appendChild(Row);
+		}
 
-            }
-            b++;
-        }
         i++;
     }
+}
+
+
+function RemoveItem(Itemid){
+	
+	const array = 	sessionStorage.getItem('cart').split(',');
+
+	const index = array.indexOf(Itemid);
+	if (index > -1) {
+	  array.splice(index, 1);
+	}
+	
+	sessionStorage.setItem('cart',array)
+	
+	document.getElementById('CartItem' + Itemid).remove();
 }
