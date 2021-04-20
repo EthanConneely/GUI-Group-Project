@@ -51,7 +51,7 @@ for (let i = 0; i < Products.length; i++)
     addToBasketBtn.innerText = "Add to basket";
     addToBasketBtn.addEventListener("click", function()
     {
-        addItemToBasket(product[0])
+        addItemToBasket(i)
     });
     infoDiv.appendChild(addToBasketBtn);
 
