@@ -15,16 +15,24 @@
 
 <body>
 
-    <div id="NewHeader">
+        <div id="NewHeader">
 
-        <!--LOGO-->
-        <img src="../images/Logo.png" id="Logo" />
-        <!--LOGO-->
+        <!--LOGO (CM)-->
+        <a href="../Store"><img src="../images/Logo.png" id="Logo" /></a>
+		<!--<img src="../images/Logo.png" id="Logo" />-->
 
-        <input type="submit" onclick="LogoutFunction();" value="Logout" />
+        <!-- User login dropdown (EC) -->
+        <div id="dropdown">
+            <h1 id="UserTag" class="dropbtn" onclick="myFunction()"> </h1>
+            <div id="myDropdown" class="dropdown-content">
+                <h3 id="userDropdownMessage">ERROR</h3>
+                <hr>
+                <a class="clickable" onclick="logout();">Log out</a>
+            </div>
+        </div>
 
-
-        <h1 id="UserTag"></h1>
+        <!-- Button to redirect to the cart (EC) -->
+        <img src="../images/Basket.png" id="BasketImage" onclick="location.pathname=location.pathname.replace('store.html','cart.html')" />
     </div>
     <br /><br /><br /><br /><br /><br />
 
@@ -47,6 +55,8 @@
 
     </div>
     <script src="../javascript/ProductList.js"></script>
+    <script src="../javascript/LoginHandling.js"></script>
+	<script src="javascript/UserDropdown.js"></script>
     <script src="../javascript/cartlogic.js"></script>
 </body>
 
