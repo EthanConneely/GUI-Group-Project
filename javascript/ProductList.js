@@ -1,8 +1,8 @@
 // all the data used for products index,image,title,discription,price,catagory (EC)
 const Products = [
-    ['../images/slideshow1.jpg', 'Ecco Mens Exostride', 'Brown water proof shoe', '€140.00', 'slideshow'],
-    ['../images/slideshow2.jpg', '2', '22', '€180.00', 'slideshow'],
-    ['../images/slideshow3.jpg', '3', '33', '€95.00', 'slideshow'],
+    ['../images/slideshow1.jpg', 'Ecco Mens Exostride', 'Mens brown waterproof shoes', '€140.00', 'slideshow'],
+    ['../images/slideshow2.jpg', 'Ecco Mens Multivent', 'Mens black waterproof shoes', '€180.00', 'slideshow'],
+    ['../images/slideshow3.jpg', 'Imac 603308', 'Mens navy waterproof shoes', '€95.00', 'slideshow'],
     ['../images/image1.jpg', "Dubarry Juliet Gold", 'Stylish womens slip on shoe', '€52.00', 'grid'],
     ['../images/image2.jpg', "Patrizio Como Lombardy Navy", 'Patizio Como Lombardy', '€62.00', 'grid'],
     ['../images/image3.jpg', 'Patrizio Como Abruzzo', 'Stylish Casual mens shoe', '€72.00', 'grid'],

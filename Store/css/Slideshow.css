@@ -1,54 +1,11 @@
+/* Holds the slide show and centers it in the window (EC) */
 #SlideshowContainer {
     width: 100%;
     margin: auto;
     position: relative;
 }
 
-@media only screen and (min-width: 768px) {
-    #SlideshowContainer {
-        width: 60%;
-    }
-
-    .pinLeft {
-        position: absolute;
-        top: 50%;
-        left: -20px;
-    }
-
-    .pinRight {
-        position: absolute;
-        top: 50%;
-        right: -20px;
-    }
-
-    .slideInfo {
-        padding: 10%;
-    }
-}
-
-
-@media only screen and (min-width: 1301px) {
-    #SlideshowContainer {
-        width: 50%;
-    }
-
-    .pinLeft {
-        position: absolute;
-        top: 50%;
-        left: -20px;
-    }
-
-    .pinRight {
-        position: absolute;
-        top: 50%;
-        right: -20px;
-    }
-
-    .slideInfo {
-        padding: 10%;
-    }
-}
-
+/* Slideshow  (EC) */
 .slide {
     width: 100%;
     background-color: lightgray;
@@ -58,20 +15,14 @@
     margin-bottom: 5%;
 }
 
+/* Pin image to the left of slide (EC) */
 .slideImage {
     display: inherit;
     border-radius: 10px;
     width: 50%;
 }
 
-.slideInfo {
-    display: inherit;
-    width: 40%;
-    height: 100%;
-    padding: 0 5%;
-    float: right;
-}
-
+/* Slide info text centering (EC) */
 .slideText {
     width: 100%;
     display: inherit;
@@ -79,18 +30,21 @@
     text-align: center;
 }
 
+/* Cycle left button pin (EC) */
 .pinLeft {
     position: absolute;
     top: 50%;
     left: 20px;
 }
 
+/* Cycle right button pin (EC) */
 .pinRight {
     position: absolute;
     top: 50%;
     right: 20px;
 }
 
+/* Make the cycle slide button circular */
 .slideButton {
     outline: 0;
     height: 40px;
@@ -103,6 +57,77 @@
     font-weight: 900;
 }
 
+/* Highlight button on hover (EC) */
 .slideButton:hover {
     background-color: rgb(163, 163, 163);
+}
+
+/* Small desktop window (EC) */
+@media only screen and (min-width: 768px) {
+    #SlideshowContainer {
+        width: 60%;
+    }
+
+    /* Cycle left button pin (EC) */
+    .pinLeft {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+
+    /* Cycle right button pin (EC) */
+    .pinRight {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+    }
+
+    /* Desktop slideshow discription (EC) */
+    .slideInfo {
+        display: inherit;
+        width: 40%;
+        height: 100%;
+        padding: 10%;
+        float: right;
+    }
+}
+
+
+/* Large desktop window (EC) */
+@media only screen and (min-width: 1301px) {
+    #SlideshowContainer {
+        width: 50%;
+    }
+
+    /* Cycle left button pin (EC) */
+    .pinLeft {
+        position: absolute;
+        top: 50%;
+        left: -20px;
+    }
+
+    /* Cycle right button pin (EC) */
+    .pinRight {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+    }
+
+    /* Desktop slideshow discription (EC) */
+    .slideInfo {
+        display: inherit;
+        width: 40%;
+        height: 100%;
+        padding: 10%;
+        float: right;
+    }
+}
+
+/* Mobile slideshow discription (EC) */
+.slideInfo {
+    display: inherit;
+    width: 40%;
+    height: 100%;
+    padding: 5%;
+    float: right;
 }
