@@ -1,14 +1,15 @@
 #Logo {
     position: absolute;
     height: 90%;
-    left: 50%;
+    left: 0%;
     right: 50%;
 }
 
 #NewHeader {
+	padding:5px;
     top: 0;
     position: relative;
-    background: #47A4E3;
+    background: lightgray;
     color: white;
     width: 100%;
     user-select: none;
