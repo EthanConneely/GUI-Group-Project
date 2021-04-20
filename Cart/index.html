@@ -32,7 +32,9 @@
         </div>
 
         <!-- Button to redirect to the cart (EC) -->
-        <img src="../images/Basket.png" id="BasketImage" onclick="location.pathname=location.pathname.replace('store.html','cart.html')" />
+        <div id="BasketImage" onclick="location.pathname=location.pathname.replace('Store','Cart')">
+            <div src="../images/Badge.png" id="BasketBadge">0</div>
+        </div>
     </div>
     <br /><br /><br /><br /><br /><br />
 
@@ -45,7 +47,7 @@
     <hr>
 
     <div id="CartContents">
-        <table border="1" id="BasketProductList"></table>
+        <table id="BasketProductList"></table>
     </div>
 
     <!-- Footer-->
@@ -58,6 +60,8 @@
     <script src="../javascript/LoginHandling.js"></script>
     <script src="../javascript/UserDropdown.js"></script>
     <script src="../javascript/cartlogic.js"></script>
+    <!-- Basket badge (EC) -->
+    <script src="../javascript/BasketBadge.js"></script>
 </body>
 
 </html>
