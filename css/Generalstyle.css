@@ -135,3 +135,9 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+#CartSubTotal{
+	color:green;
+	font-weight:900;
+	font-variant:all-petite-caps;
+}

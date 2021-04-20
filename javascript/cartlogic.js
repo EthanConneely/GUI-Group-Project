@@ -11,6 +11,31 @@ else
 {
     BasketList = sessionStorage.getItem('cart');
     AmountOfProducts = BasketList.split(',').length;
+
+	
+	document.getElementById('BasketProductList').innerHTML = '';
+	
+	TitleTH = document.createElement('th');
+	TitleTH.innerHTML = 'Product Name';
+	document.getElementById('BasketProductList').appendChild(TitleTH);
+	
+	PriceTH = document.createElement('th');
+	PriceTH.innerHTML = 'Product Price (Per Item)';
+	document.getElementById('BasketProductList').appendChild(PriceTH);
+	
+	ImageTH = document.createElement('th');
+	ImageTH.innerHTML = 'Product Image';
+	document.getElementById('BasketProductList').appendChild(ImageTH);
+	
+	QuantityTH = document.createElement('th');
+	QuantityTH.innerHTML = 'Product Image';
+	document.getElementById('BasketProductList').appendChild(QuantityTH);
+
+	RemoveTH = document.createElement('th');
+	RemoveTH.innerHTML = 'Remove Item';
+	document.getElementById('BasketProductList').appendChild(RemoveTH);
+	
+	SubTotal = 0;
 	
     i = 0;
     while(BasketList.split(',')[i] != undefined)
@@ -21,27 +46,6 @@ else
 		
 		if(ProductNum != undefined){
 			
-			TitleTH = document.createElement('th');
-			TitleTH.innerHTML = 'Product Name';
-			document.getElementById('BasketProductList').appendChild(TitleTH);
-			
-			PriceTH = document.createElement('th');
-			PriceTH.innerHTML = 'Product Price (Per Item)';
-			document.getElementById('BasketProductList').appendChild(PriceTH);
-			
-			ImageTH = document.createElement('th');
-			ImageTH.innerHTML = 'Product Image';
-			document.getElementById('BasketProductList').appendChild(ImageTH);
-			
-			QuantityTH = document.createElement('th');
-			QuantityTH.innerHTML = 'Product Image';
-			document.getElementById('BasketProductList').appendChild(QuantityTH);
-
-			RemoveTH = document.createElement('th');
-			RemoveTH.innerHTML = 'Remove Item';
-			document.getElementById('BasketProductList').appendChild(RemoveTH);
-
-
 			Row = document.createElement('tr');
 			Row.setAttribute('id','CartItem' + ProductNum);
 			RowItem = document.createElement('td');
@@ -57,6 +61,9 @@ else
 
 			ProductPrice = document.createElement('p');
 			ProductPrice.innerHTML = Products[ProductNum][3];
+			
+			SubTotal = SubTotal + Number(Products[ProductNum][3].replace('€',''));
+			
 
 			SecondRowItem.appendChild(ProductPrice);
 			Row.appendChild(SecondRowItem);
@@ -86,21 +93,23 @@ else
 
 			RemoveButton = document.createElement('p');
 			RemoveButton.setAttribute('id', 'RemoveItemButton');
-			RemoveButton.setAttribute('onclick', 'RemoveItem("' + ProductNum + '")');
+			RemoveButton.setAttribute('onclick', 'RemoveItem("' + ProductNum + '","' + Products[ProductNum][3] + '")');
 			RemoveButton.innerHTML = 'X';
 
 			FifthRowItem.appendChild(RemoveButton);
 			Row.appendChild(FifthRowItem);
+			
 
 			document.getElementById('BasketProductList').appendChild(Row);
 		}
 
         i++;
     }
+	document.getElementById('CartSubTotal').innerHTML = 'Sub Total : €' + SubTotal;
 }
 
 
-function RemoveItem(Itemid){
+function RemoveItem(Itemid,ItemPrice){
 	
 	const array = 	sessionStorage.getItem('cart').split(',');
 
@@ -112,4 +121,8 @@ function RemoveItem(Itemid){
 	sessionStorage.setItem('cart',array)
 	
 	document.getElementById('CartItem' + Itemid).remove();
+	
+	OldSubTotal = document.getElementById('CartSubTotal').innerHTML.split(':')[1];
+	NewSubTotal = Number(OldSubTotal.replace('€','')) - Number(ItemPrice.replace('€',''));
+	document.getElementById('CartSubTotal').innerHTML = 'SUB TOTAL : €'  + NewSubTotal;
 }
