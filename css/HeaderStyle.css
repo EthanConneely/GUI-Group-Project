@@ -24,10 +24,27 @@
 /*Basic CSS for position on the basketimage (CM)*/
 #BasketImage {
     float: right;
+    position: relative;
     height: 50px;
     width: 50px;
     margin: 20px;
     cursor: pointer;
+    background-image: url("../images/Basket.png");
+    background-size: contain;
+}
+
+/* Badge image to show how many items are in the basket */
+#BasketBadge {
+    background-image: url("../images/Badge.png");
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    text-align: center;
+    font-weight: 800;
+    right: -10px;
+    top: -5px;
+    display: none;
 }
 
 

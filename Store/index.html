@@ -31,7 +31,9 @@
         </div>
 
         <!-- Button to redirect to the cart (EC) -->
-        <img src="../images/Basket.png" id="BasketImage" onclick="location.pathname=location.pathname.replace('Store','Cart')" />
+        <div id="BasketImage" onclick="location.pathname=location.pathname.replace('Store','Cart')">
+            <div src="../images/Badge.png" id="BasketBadge">0</div>
+        </div>
     </div>
 
     <!-- Spacing (CM) -->
@@ -70,6 +72,8 @@
     <script src="javascript/ProductDisplay.js"></script>
     <!-- Slideshow (EC) -->
     <script src="javascript/Slideshow.js"></script>
+    <!-- Basket badge (EC) -->
+    <script src="javascript/BasketBadge.js"></script>
 </body>
 
 </html>
