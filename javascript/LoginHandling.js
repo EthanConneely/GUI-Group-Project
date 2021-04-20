@@ -17,10 +17,7 @@ if (sessionStorage.Email != null && sessionStorage.Password != null)
         var atsignLocation = email.indexOf("@");
         var username = email.substring(0, atsignLocation);
 
-        var tag = document.getElementById('UsernameTag');
-
         // Add the name to the different elements (EC)
-        tag.innerText = 'Welcome, ' + username;
         document.getElementById('userDropdownMessage').innerText = 'You are logged in as ' + username;
 
         // Add the first letter of the name to the user tag (EC)

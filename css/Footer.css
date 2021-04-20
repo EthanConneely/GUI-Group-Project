@@ -1,9 +1,17 @@
-#NewFooter {
-	bottom: 0;
-	background: gray;
-	color: white;
-	width: 100%;
-	margin-top: 10px;
-	padding: 30px 0;
-	height:50px;
+footer {
+    background: gray;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px 0;
+    height: fit-content;
+    text-align: center;
 }
+
+footer a {
+    color: #cae4f1;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+footer>a:visited {}

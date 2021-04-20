@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Home</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Store</title>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="../css/HeaderStyle.css">
     <link rel="stylesheet" href="../css/Footer.css">
@@ -22,7 +22,7 @@
 
         <!-- User login dropdown (EC) -->
         <div id="dropdown">
-            <h1 id="UserTag" class="dropbtn" onclick="myFunction()"> </h1>
+            <h1 id="UserTag" class="dropbtn" onclick="myFunction();"> </h1>
             <div id="myDropdown" class="dropdown-content">
                 <h3 id="userDropdownMessage">ERROR</h3>
                 <a class="clickable" onclick="logout();">Log out</a>
@@ -32,19 +32,32 @@
         <!-- Button to redirect to the cart (EC) -->
         <img src="../images/Basket.png" id="BasketImage" onclick="location.pathname=location.pathname.replace('Store','Cart')" />
     </div>
-    <br /><br /><br /><br /><br /><br />
 
-    <h1 id="UsernameTag"></h1>
+    <!-- Spacing (CM) -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    <hr>
+    <!-- Catagory title (EC) -->
+    <h2 class="productCatagory">Shoes</h2>
+
+
+
 
     <!-- Product container is filled from ProductDisplay (EC)-->
     <div id="ProductGrid">
     </div>
 
     <!-- Footer -->
-    <footer id="NewFooter">
-        <h1>End Content</h1>
+    <footer>
+        <h2>Made by</h2>
+        <a href="https://maguirewebandsoftware.com/">Caolán</a>
+
+        <br><br>
+
+        <a href="https://irishbruse.github.io/">Ethan</a>
     </footer>
 
     <script src="../javascript/ProductList.js"></script>
