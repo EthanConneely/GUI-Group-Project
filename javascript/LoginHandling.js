@@ -1,13 +1,4 @@
-let relativePath = location.pathname.substr(0, (location.pathname).lastIndexOf('/') + 1);
-if (relativePath == "")
-{
-    relativePath = location.pathname;
-}
-
-if (location.pathname.includes("index.html"))
-{
-    location.pathname = relativePath;
-}
+let relativePath = "/GuiGroupProject/";
 
 
 // Already logged in (EC)
@@ -16,7 +7,7 @@ if (sessionStorage.Email != null && sessionStorage.Password != null)
     // Already logged in redirect and on the login page redirect to store (EC)
     if (location.pathname == relativePath)
     {
-        location.pathname = relativePath + "store.html";
+        location.pathname = relativePath + "Store/";
     }
     else
     {
@@ -96,7 +87,7 @@ function login()
             email.setCustomValidity("");
             sessionStorage.setItem("Email", email.value);
             sessionStorage.setItem("Password", password.value);
-            location.pathname = relativePath + "store.html";
+            location.pathname = relativePath + "Store/";
             return;
         }
         else
@@ -123,5 +114,5 @@ function logout()
 {
     // Clear session and redirect to login page (EC)
     sessionStorage.clear();
-    location.pathname = relativePath + "index.html";
+    location.pathname = relativePath;
 }

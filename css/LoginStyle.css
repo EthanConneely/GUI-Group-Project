@@ -55,8 +55,8 @@
 }
 
 .InputField:focus {
-    border-color: skyblue !important;
-    box-shadow: lightskyblue 1px 1px 10px 2px;
+    border-color: darkgray !important;
+    box-shadow: gray 1px 1px 10px 2px;
 }
 
 /* Color sign in button to green with dark green border plus round edges(EC)*/
