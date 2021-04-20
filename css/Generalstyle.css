@@ -117,3 +117,21 @@ h1, h2, h3, h4, h5, h6, p, i, ul, li {
     font-size: x-large;
     font-weight: bold;
 }
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 5px;
+  font-variant:all-petite-caps;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

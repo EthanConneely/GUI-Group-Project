@@ -21,6 +21,27 @@ else
 		
 		if(ProductNum != undefined){
 			
+			TitleTH = document.createElement('th');
+			TitleTH.innerHTML = 'Product Name';
+			document.getElementById('BasketProductList').appendChild(TitleTH);
+			
+			PriceTH = document.createElement('th');
+			PriceTH.innerHTML = 'Product Price (Per Item)';
+			document.getElementById('BasketProductList').appendChild(PriceTH);
+			
+			ImageTH = document.createElement('th');
+			ImageTH.innerHTML = 'Product Image';
+			document.getElementById('BasketProductList').appendChild(ImageTH);
+			
+			QuantityTH = document.createElement('th');
+			QuantityTH.innerHTML = 'Product Image';
+			document.getElementById('BasketProductList').appendChild(QuantityTH);
+
+			RemoveTH = document.createElement('th');
+			RemoveTH.innerHTML = 'Remove Item';
+			document.getElementById('BasketProductList').appendChild(RemoveTH);
+
+
 			Row = document.createElement('tr');
 			Row.setAttribute('id','CartItem' + ProductNum);
 			RowItem = document.createElement('td');
