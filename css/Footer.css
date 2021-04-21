@@ -1,3 +1,4 @@
+/* Footer styling and centering all contents (EC) */
 footer {
     background: gray;
     color: white;
@@ -6,12 +7,14 @@ footer {
     padding: 10px 0;
     height: fit-content;
     text-align: center;
+
+    position: relative;
+    bottom: 0;
 }
 
+/* Footer links coloring (EC) */
 footer a {
     color: #cae4f1;
     text-transform: uppercase;
     text-decoration: none;
 }
-
-footer>a:visited {}

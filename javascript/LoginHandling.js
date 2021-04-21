@@ -49,6 +49,7 @@ function forgotPassword()
 // Login to account (EC)
 function login()
 {
+    // Get the fields in the form (EC)
     var email = document.getElementById("Email");
     var password = document.getElementById("Password");
     var foundValidEmail = false;
@@ -100,7 +101,7 @@ function login()
     }
 }
 
-// prevent the form from reloading the page (EC)
+// Prevent the form from reloading the page (EC)
 function submit(event)
 {
     event.preventDefault();
