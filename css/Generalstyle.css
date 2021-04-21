@@ -1,20 +1,20 @@
-fieldset{
-	width:70%;
-	height:400px;
-	position:absolute;
-	background:white;
-	border:0;
-	padding:10px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	margin:10%;
-	margin-left:10%;
-	overflow:auto;
+fieldset {
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    background: white;
+    border: 0;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    margin: 10%;
+    margin-left: 10%;
+    overflow: auto;
 }
 
-fieldset input, select{
-	padding:10px;
-	font-variant:all-petite-caps;
-	font-size:20px;
+fieldset input, select {
+    padding: 10px;
+    font-variant: all-petite-caps;
+    font-size: 20px;
 }
 
 * {
@@ -34,7 +34,7 @@ fieldset input, select{
     text-align: center;
     font-size: 35px;
     cursor: pointer;
-	border: 2px solid black;
+    border: 2px solid black;
 
 }
 
@@ -144,24 +144,24 @@ body, html {
 
 
 table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
 }
 
 td, th {
-  border: 1px solid black;
-  text-align: left;
-  padding: 5px;
-  font-variant:all-petite-caps;
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+    font-variant: all-petite-caps;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+    background-color: #dddddd;
 }
 
-#CartSubTotal{
-	color:green;
-	font-weight:900;
-	font-variant:all-petite-caps;
+#CartSubTotal {
+    color: green;
+    font-weight: 900;
+    font-variant: all-petite-caps;
 }

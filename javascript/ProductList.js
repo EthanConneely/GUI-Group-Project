@@ -4,7 +4,7 @@ const Products = [
     ['../images/slideshow2.jpg', 'Ecco Mens Multivent', 'Mens black waterproof shoes', '€180.00', 'slideshow'],
     ['../images/slideshow3.jpg', 'Imac 603308', 'Mens navy waterproof shoes', '€95.00', 'slideshow'],
     ['../images/image1.jpg', "Dubarry Juliet Gold", 'Stylish womens slip on shoe', '€52.00', 'grid'],
-    ['../images/image2.jpg', "Patrizio Como Lombardy Navy", 'Patizio Como Lombardy', '€62.00', 'grid'],
+    ['../images/image2.jpg', "Patrizio Como Lombardy", 'Patizio Como Lombardy', '€62.00', 'grid'],
     ['../images/image3.jpg', 'Patrizio Como Abruzzo', 'Stylish Casual mens shoe', '€72.00', 'grid'],
     ['../images/image4.jpg', 'Ecco Aquet', 'Comfortable runner', '€82.00', 'grid'],
     ['../images/image5.jpg', 'Ecco Helsinki Black', 'Stylish comfortable runner', '€92.00', 'grid'],
