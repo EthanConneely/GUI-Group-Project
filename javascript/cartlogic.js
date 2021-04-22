@@ -128,3 +128,12 @@ function RemoveItem(Itemid, ItemPrice)
     NewSubTotal = Number(OldSubTotal.replace('€', '')) - Number(ItemPrice.replace('€', ''));
     document.getElementById('CartSubTotal').innerHTML = 'SUB TOTAL : €' + NewSubTotal;
 }
+
+
+function ProceedToCheckout(){
+	document.getElementById('CheckoutForm').setAttribute('style','display:unset;');
+}
+
+function HideCheckout(){
+	document.getElementById('CheckoutForm').setAttribute('style','display:none;');
+}
