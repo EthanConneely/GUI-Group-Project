@@ -29,7 +29,11 @@ else
     // We are not logged in and we are not on the login page redirect to login page (EC)
     if (location.pathname != relativePath)
     {
+<<<<<<< Updated upstream
         location.pathname = relativePath;
+=======
+        //location.pathname = "index.html";
+>>>>>>> Stashed changes
     }
 }
 
