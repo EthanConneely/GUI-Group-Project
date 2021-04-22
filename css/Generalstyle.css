@@ -1,32 +1,18 @@
-#ProceedToCheckoutButton{
-	padding:10px;
-	margin:10px;
-	font-variant:all-petite-caps;
+#ProceedToCheckoutButton {
+    padding: 10px;
+    margin: 10px;
+    font-variant: all-petite-caps;
 }
 
-#CheckoutForm{
-	top:15%;
-	margin:10%;
-	margin-top:0;
-	padding:10px;
-	font-size:20px;
-	width:80%;
+#CheckoutForm {
+    top: 15%;
+    margin: 10%;
+    margin-top: 0;
+    padding: 10px;
+    font-size: 20px;
+    width: 80%;
 }
 
-fieldset{
-	display:none;
-	width:70%;
-	height:400px;
-	position:absolute;
-	background:white;
-	border:0;
-	padding:10px;
-	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-	margin:10%;
-	margin-left:10%;
-	overflow:auto;
-	z-index:100;
-	
 fieldset {
     width: 70%;
     height: 400px;
