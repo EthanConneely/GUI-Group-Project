@@ -25,6 +25,7 @@
             <h1 id="UserTag" class="dropbtn" onclick="showDropdown();"> </h1>
             <div id="myDropdown" class="dropdown-content">
                 <h3 id="userDropdownMessage">ERROR</h3>
+                <a class="clickable" onclick="location.pathname=location.pathname.replace('Store','Cart');">Basket</a>
                 <a class="clickable" onclick="logout();">Log out</a>
             </div>
         </div>
@@ -93,7 +94,7 @@
     </div>
 
     <!-- Footer (EC) -->
-    <footer>
+    <footer id="footer">
         <h2>Made by</h2>
         <!-- Link to Caolans site (CA) -->
         <a href="https://maguirewebandsoftware.com/">Caolán</a>
@@ -109,29 +110,13 @@
     </footer>
 
     <!-- Global -->
-    <script src="../javascript/UserDropdown.js"></script>
     <script src="../javascript/LoginHandling.js"></script>
+    <script src="../javascript/UserDropdown.js"></script>
     <script src="../javascript/BasketBadge.js"></script>
     <!-- Cart -->
     <script src="../javascript/ProductList.js"></script>
     <script src="../javascript/cartlogic.js"></script>
-
-    <!-- pin the footer to the bottom of the page -->
-    <script>
-        let bodyHeight = document.getElementById("body").offsetHeight;
-        let viewportHeight = window.innerHeight;
-
-        offset = viewportHeight - bodyHeight + 20;
-        if (offset < 0)
-        {
-            document.getElementById("footer").style.marginTop = "";
-        }
-        else
-        {
-            document.getElementById("footer").style.marginTop = offset + "px";
-        }
-
-    </script>
+    <script src="javascript/FooterFix.js"></script>
 </body>
 
 </html>
