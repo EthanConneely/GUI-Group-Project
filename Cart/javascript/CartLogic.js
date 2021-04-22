@@ -130,10 +130,12 @@ function RemoveItem(Itemid, ItemPrice)
 }
 
 
-function ProceedToCheckout(){
-	document.getElementById('CheckoutForm').setAttribute('style','display:unset;');
+function ProceedToCheckout()
+{
+    document.getElementById('CheckoutForm').setAttribute('style', 'display:unset;');
 }
 
-function HideCheckout(){
-	document.getElementById('CheckoutForm').setAttribute('style','display:none;');
+function HideCheckout()
+{
+    document.getElementById('CheckoutForm').setAttribute('style', 'display:none;');
 }
