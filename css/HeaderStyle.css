@@ -1,12 +1,12 @@
 /*Styling the logo on the header (CM & EC)*/
 #Logo {
-    /*setting height, and putting the logo to the left (CM & EC)*/
     position: absolute;
     left: 0%;
     height: 100%;
     z-index: -1;
 }
 
+/* Confine the image to its container (EC) */
 #Logo>img {
     height: 100%;
 }

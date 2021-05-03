@@ -1,4 +1,5 @@
-// all the data used for products image,title,discription,price,catagory (EC) (CM)
+// All the data used for products (EC) (CM)
+// image,title,discription,price,catagory 
 const Products = [
     ['../images/slideshow1.jpg', 'Ecco Mens Exostride', 'Mens brown waterproof shoes', '€140.00', 'slideshow'],
     ['../images/slideshow2.jpg', 'Ecco Mens Multivent', 'Mens black waterproof shoes', '€180.00', 'slideshow'],

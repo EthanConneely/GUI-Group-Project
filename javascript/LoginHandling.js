@@ -1,3 +1,4 @@
+// Used for github pages hosting (EC)
 let relativePath = "/GuiGroupProject/";
 
 
@@ -78,7 +79,7 @@ function login()
             }
         }
 
-        // We have the right detail save them and move them to the store (EC)
+        // We have the right details save them and move them to the store (EC)
         if (foundValidPassword)
         {
             password.setCustomValidity("");

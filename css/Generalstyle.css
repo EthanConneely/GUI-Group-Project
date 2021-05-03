@@ -76,6 +76,7 @@ body, html {
     margin: 30px;
 }
 
+/* Each product container created using dom from an array (EC) */
 .cell {
     width: 100%;
     float: left;
@@ -84,12 +85,14 @@ body, html {
     margin: auto;
 }
 
+/* snippet from here for responsive grid https://www.w3schools.com/css/css_rwd_grid.asp (EC) */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
 
+/* Container for the most the stuff on the store page (EC) */
 #ProductGrid {
     margin-top: 20%;
 }
@@ -120,7 +123,7 @@ body, html {
     }
 }
 
-/* (EC) */
+/*  */
 .productImage {
     display: block;
     width: 100%;
@@ -128,7 +131,7 @@ body, html {
     border-radius: 1em 1em 0 0;
 }
 
-/* (EC) */
+/*  */
 .productPrice {
     text-align: center;
     color: green;
@@ -150,22 +153,22 @@ body, html {
     font-weight: bolder;
 }
 
-/* (EC) */
+/* Change to lighter shade to show you are hovering (EC) */
 .productButton:hover {
     background-color: #ffa500;
 }
 
-/* (EC) */
+/* Add a shadow to make it look like its a button pushed in with an inset shadow (EC) */
 .productButton:active {
     box-shadow: inset 2px 2px 2px black;
 }
 
-/* (EC) */
+/* Make the element look clickable (EC) */
 .clickable {
     cursor: pointer;
 }
 
-/* (EC) */
+/* Header for the shoes (EC) */
 .productCatagory {
     text-align: center;
     font-size: x-large;

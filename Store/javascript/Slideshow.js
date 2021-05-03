@@ -17,28 +17,35 @@ for (let i = 0; i < Products.length; i++)
         continue;
     }
 
-    // Create slide div (EC)
+    // Create the slides for the slide show using DOM (EC)
     var slide = document.createElement("div");
     slide.className = "slide";
 
+    // create image using DOM (EC)
     var img = document.createElement("img");
     img.className = "slideImage";
     img.src = product[0]
+
+    // Add the preview image to the slide on the left (EC)
     slide.appendChild(img);
 
+    // Create image using DOM (EC)
     var infoDiv = document.createElement("div");
     infoDiv.className = "slideInfo";
 
+    // Create image using DOM (EC)
     var discription = document.createElement("h2")
     discription.className = "slideText";
     discription.innerText = product[1];
     infoDiv.appendChild(discription);
 
+    // Create image using DOM (EC)
     var discription = document.createElement("p")
     discription.className = "slideText";
     discription.innerText = product[2];
     infoDiv.appendChild(discription);
 
+    // Create image using DOM (EC)
     var cost = document.createElement("p")
     cost.className = "slideText";
     cost.style.color = "green";
@@ -46,6 +53,7 @@ for (let i = 0; i < Products.length; i++)
     cost.innerText = product[3];
     infoDiv.appendChild(cost);
 
+    // Create image using DOM (EC)
     var addToBasketBtn = document.createElement("button")
     addToBasketBtn.className = "productButton";
     addToBasketBtn.innerText = "Add to basket";
@@ -55,8 +63,10 @@ for (let i = 0; i < Products.length; i++)
     });
     infoDiv.appendChild(addToBasketBtn);
 
+    // Add the info to the slide (EC)
     slide.appendChild(infoDiv);
 
+    // Add the finished slide to the container (EC)
     slidecontainer.appendChild(slide);
 }
 
@@ -66,19 +76,21 @@ var slides = document.getElementsByClassName("slide");
 let slideIndex = Math.floor(Math.random() * slides.length);
 showSlide(slideIndex);
 
-// cycle the images (EC)
+// Cycle the images left (EC)
 function cycleLeft()
 {
     slideIndex--;
     showSlide();
 }
 
+// Cycle the images right (EC)
 function cycleRight()
 {
     slideIndex++;
     showSlide();
 }
 
+// Change the displayed image to the correct index and show it (EC)
 function showSlide()
 {
     if (slideIndex >= slides.length)

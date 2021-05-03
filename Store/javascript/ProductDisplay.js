@@ -55,6 +55,7 @@ for (let i = 0; i < Products.length; i++)
     addToBasket.className = "productButton";
     addToBasket.innerText = "Add to basket";
 
+    // Listen for clicks and add the id to session storage (EC)
     addToBasket.addEventListener("click", function()
     {
         addItemToBasket(i)
