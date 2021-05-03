@@ -1,8 +1,14 @@
-/*Styling the logo on the header (CM)*/
+/*Styling the logo on the header (CM & EC)*/
 #Logo {
-    /*setting height, and putting the logo to the left (CM)*/
-    height: 90%;
+    /*setting height, and putting the logo to the left (CM & EC)*/
+    position: absolute;
     left: 0%;
+    height: 100%;
+    z-index: -1;
+}
+
+#Logo>img {
+    height: 100%;
 }
 
 /*Styling to header (CM)*/

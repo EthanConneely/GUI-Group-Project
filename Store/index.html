@@ -29,7 +29,9 @@
     <div id="NewHeader">
 
         <!--Logo (CM)-->
-        <a href="../Store"><img src="../images/Logo.png" id="Logo" /></a>
+        <a href="../Store" id="Logo">
+            <img src="../images/Logo.png" />
+        </a>
 
         <!-- User login dropdown (EC) -->
         <div id="dropdown">
@@ -47,20 +49,18 @@
         </div>
     </div>
 
-    <!-- Spacing (CM) -->
-    <br> <br> <br> <br> <br>
-
-    <!-- Slideshow (EC) -->
-    <div id="SlideshowContainer">
-        <button onclick="cycleLeft()" class="pinLeft slideButton">&#10094;</button>
-        <button onclick="cycleRight()" class="pinRight slideButton">&#10095;</button>
-    </div>
-
-    <!-- Catagory title (EC) -->
-    <h2 class="productCatagory">Shoes</h2>
-
     <!-- Product container is filled from ProductDisplay (EC)-->
-    <div id="ProductGrid"></div>
+    <div id="ProductGrid">
+        <!-- Slideshow (EC) -->
+        <div id="SlideshowContainer">
+            <button onclick="cycleLeft()" class="pinLeft slideButton">&#10094;</button>
+            <button onclick="cycleRight()" class="pinRight slideButton">&#10095;</button>
+        </div>
+
+        <!-- Catagory title (EC) -->
+        <h2 class="productCatagory">Shoes</h2>
+
+    </div>
 
     <!-- Footer (EC) -->
     <footer>

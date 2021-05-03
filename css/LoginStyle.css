@@ -6,7 +6,7 @@
 #LoginForm {
     background-color: lightgrey;
     width: auto;
-    margin: 0;
+    margin: 0px;
     padding: 0 2em 2em;
     border-radius: 10px;
     border-style: none;
@@ -15,15 +15,15 @@
 
 /* Center logo (EC)*/
 #LoginLogo {
-    margin: auto auto 4rem auto;
+    margin: auto;
     width: min-content;
-
 }
 
 /* Center title (EC)*/
 #LoginTitle {
     text-align: center;
     margin-bottom: 2rem;
+    padding-top: 150px;
 }
 
 /* Make the forgot password paragraph in a link (EC)*/
@@ -84,6 +84,10 @@
 
 /* desktop media query (EC)*/
 @media only screen and (min-width: 768px) {
+    #logo {
+        font-size: large;
+    }
+
     .InputField {
         font-size: large;
     }
@@ -95,6 +99,7 @@
     #LoginForm {
         width: 250px;
         margin: auto;
+        padding: 20px 40px;
     }
 
     .FieldSpacing {

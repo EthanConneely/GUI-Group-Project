@@ -90,6 +90,11 @@ body, html {
     clear: both;
 }
 
+#ProductGrid {
+    margin-top: 20%;
+}
+
+/* small desktop media query (EC) */
 @media only screen and (min-width: 768px) {
     .cell {
         width: 50%;
@@ -98,9 +103,11 @@ body, html {
     #ProductGrid {
         width: 75%;
         margin: auto;
+        margin-top: 10%;
     }
 }
 
+/* large desktop media query (EC) */
 @media only screen and (min-width: 1301px) {
     .cell {
         width: 25%;
@@ -109,9 +116,11 @@ body, html {
     #ProductGrid {
         width: 75%;
         margin: auto;
+        margin-top: 10%;
     }
 }
 
+/* (EC) */
 .productImage {
     display: block;
     width: 100%;
@@ -119,44 +128,49 @@ body, html {
     border-radius: 1em 1em 0 0;
 }
 
+/* (EC) */
 .productPrice {
     text-align: center;
     color: green;
     font-weight: bold;
 }
 
+/* Add to basket button on all products (EC) */
 .productButton {
     width: 50%;
+    height: 30px;
     margin: 0 25%;
-    border-radius: 15px;
-    border-color: gray;
-    border-width: 3px;
-    border-style: solid;
-    background-color: lightgray;
-    outline: 0ch;
+    background-color: #ff8400;
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    outline: 0px;
     cursor: pointer;
-    font-weight: 600;
+    font-weight: bolder;
 }
 
+/* (EC) */
 .productButton:hover {
-    background-color: lightgreen;
-    border-color: gray;
+    background-color: #ffa500;
 }
 
+/* (EC) */
 .productButton:active {
-    background-color: darkgreen;
+    box-shadow: inset 2px 2px 2px black;
 }
 
+/* (EC) */
 .clickable {
     cursor: pointer;
 }
 
+/* (EC) */
 .productCatagory {
     text-align: center;
     font-size: x-large;
     font-weight: bold;
 }
-
 
 table {
     font-family: arial, sans-serif;
