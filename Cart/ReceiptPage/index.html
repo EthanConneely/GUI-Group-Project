@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cart</title>
+    <link rel="shortcut icon" href="../../images/Icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../../css/HeaderStyle.css">
+    <link rel="stylesheet" href="../../css/Footer.css">
+    <link rel="stylesheet" href="../../css/Generalstyle.css">
+
+    <!-- Global -->
+    <script defer src="../../javascript/LoginHandling.js"></script>
+    <script defer src="../../javascript/UserDropdown.js"></script>
+    <script defer src="../../javascript/BasketBadge.js"></script>
+    <script defer src="../../javascript/ProductList.js"></script>
+
+    <!-- Cart -->
+    <script defer src="../javascript/FooterFix.js"></script>
+</head>
+
+<body id="body">
+
+    <div id="NewHeader">
+
+        <!--Logo (CM)-->
+        <a href="../../Store"><img src="../../images/Logo.png" id="Logo" /></a>
+
+        <!-- User login dropdown (EC) -->
+        <div id="dropdown">
+            <h1 id="UserTag" class="dropbtn" onclick="showDropdown();"> </h1>
+            <div id="myDropdown" class="dropdown-content">
+                <h3 id="userDropdownMessage">ERROR</h3>
+                <a class="clickable" onclick="location.pathname=location.pathname.replace('Store','Cart');">Basket</a>
+                <a class="clickable" onclick="logout();">Log out</a>
+            </div>
+        </div>
+
+        <!-- Button to redirect to the cart (EC) -->
+        <div id="BasketImage" onclick="location.pathname=location.pathname.replace('Store','Cart')">
+            <div src="../images/Badge.png" id="BasketBadge">0</div>
+        </div>
+    </div>
+    <br /><br /><br /><br /><br /><br />
+
+    <h1 id="UsernameTag"></h1>
+
+    <hr>
+
+    <h1>Cart Page</h1>
+
+    <hr>
+
+    <fieldset id="CheckoutForm">
+        <input type="submit" id="FormCloseButton" onclick="HideCheckout()" value="X" />
+        <br/>
+            <h1>Checkout</h1>
+
+            <label>Title : </label> <br />
+            <select id="TitleInput">
+                <option>-- --</option>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Prefer not to say</option>
+            </select> <br /> <br />
+
+            <label>First Name</label> <br />
+            <input type="text" id="FnameInput" required="required" /><br /><br />
+
+            <label>Last Name</label><br />
+            <input type="text" id="LnameInput" required="required" /> <br /> <br />
+
+            <label>Phone Number</label> <br />
+            <input type="number" id="PnumberInput"/> <br /> <br />
+
+            <br />
+            <hr><br />
+
+            <h2>Shipping Address</h2> <br />
+
+            <label></label><br />
+            <input type="text" id="ShippingAddressInput" required="required" />
+            <br /><br />
+
+            <label>Coupon</label><br />
+            <input type="text" id="CouponInput"/>
+            <br /><br />
+
+            <input type="submit" value="Purchase" onclick="CreateReceipt()"/>
+    </fieldset>
+
+    <h1 id="CartSubTotal"></h1> <br />
+
+    <input type="submit" id="ProceedToCheckoutButton" onclick="ProceedToCheckout()" value="Proceed to checkout" />
+
+    <div id="CartContents">
+        <table id="BasketProductList"></table>
+    </div>
+
+    <!-- Footer (EC) -->
+    <footer id="footer">
+        <h2>Made by</h2>
+        <!-- Link to Caolans site (CA) -->
+        <a href="https://maguirewebandsoftware.com/">Caolán</a>
+
+        <!-- And symbol -->
+        &
+
+        <!-- Link to Ethans site (EC) -->
+        <a href="https://irishbruse.github.io/">Ethan</a>
+
+        <!-- Back to top button (EC) -->
+        <p class="clickable" style="color: lightblue;" onclick="document.documentElement.scrollTop = 0;">Back to top</p>
+    </footer>
+</body>
+
+</html>

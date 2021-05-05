@@ -21,6 +21,8 @@
     <!-- Cart -->
     <script defer src="javascript/CartLogic.js"></script>
     <script defer src="javascript/FooterFix.js"></script>
+    <script defer src="javascript/receipt.js"></script>
+    <script defer src="javascript/coupon.js"></script>
 </head>
 
 <body id="body">
@@ -51,58 +53,60 @@
 
     <h1 id="UsernameTag"></h1>
 
-    <hr>
+    <div id="ReceiptContainer"></div>
 
-    <h1>Cart Page</h1>
-
-    <hr>
-
-    <fieldset id="CheckoutForm">
-        <input type="submit" onclick="HideCheckout()" value="X" />
+    <div id="CartContainer">
         <hr>
-        <form>
-            <h1>Checkout</h1>
 
-            <label>Title : </label> <br />
-            <select>
-                <option>-- --</option>
-                <option>Mr.</option>
-                <option>Mrs.</option>
-                <option>Prefer not to say</option>
-            </select> <br /> <br />
+        <h1>Cart Page</h1>
 
-            <label>First Name</label> <br />
-            <input type="text" required="required" /><br /><br />
+        <hr>
 
-            <label>Last Name</label><br />
-            <input type="text" required="required" /> <br /> <br />
+        <fieldset id="CheckoutForm">
+            <input type="submit" onclick="HideCheckout()" value="X" />
+            <hr>
+                <h1>Checkout</h1>
 
-            <label>Phone Number</label> <br />
-            <input type="number" /> <br /> <br />
+                <label>Title : </label> <br />
+                <select id="TitleInput" >
+                    <option>-- --</option>
+                    <option>Mr.</option>
+                    <option>Mrs.</option>
+                    <option>Prefer not to say</option>
+                </select> <br /> <br />
 
-            <br />
-            <hr><br />
+                <label>First Name</label> <br />
+                <input type="text" id="FnameInput" /><br /><br />
 
-            <h2>Shipping Address</h2> <br />
+                <label>Last Name</label><br />
+                <input type="text" id="LnameInput" /> <br /> <br />
 
-            <label></label><br />
-            <input type="text" required="required" />
-            <br /><br />
+                <label>Phone Number</label> <br />
+                <input type="number" id="PnumberInput"/> <br /> <br />
 
-            <label>Coupon</label><br />
-            <input type="text" />
-            <br /><br />
+                <br />
+                <hr><br />
 
-            <input type="submit" value="Purchase" />
-        </form>
-    </fieldset>
+                <h2>Shipping Address</h2> <br />
 
-    <h1 id="CartSubTotal"></h1> <br />
+                <label></label><br />
+                <input type="text" id="ShippingAddressInput" />
+                <br /><br />
 
-    <input type="submit" id="ProceedToCheckoutButton" onclick="ProceedToCheckout()" value="Proceed to checkout" />
+                <label>Coupon</label><br />
+                <input type="text" id="CouponInput"/>
+                <br /><br />
 
-    <div id="CartContents">
-        <table id="BasketProductList"></table>
+                <input type="submit" value="Purchase" onclick="CreateReceipt()" />
+        </fieldset>
+
+        <h1 id="CartSubTotal"></h1> <br />
+
+        <input type="submit" id="ProceedToCheckoutButton" onclick="ProceedToCheckout()" value="Proceed to checkout" />
+
+        <div id="CartContents">
+            <table id="BasketProductList"></table>
+        </div>
     </div>
 
     <!-- Footer (EC) -->

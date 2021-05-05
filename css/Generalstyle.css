@@ -5,6 +5,7 @@
 }
 
 #CheckoutForm {
+    display:none;
     top: 15%;
     margin: 10%;
     margin-top: 0;
