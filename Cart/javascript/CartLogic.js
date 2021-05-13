@@ -1,5 +1,4 @@
-//JustForTestingPurposes
-
+// CHECKS IF SESSIONSTORAGE ITEM EXISTS IF SO CREATES ELEMENT SETS INNERHTML AND SETS ATTRIBTUES AND APPENDS TO ID CARTCONTENTS ELEMENTS(CM)
 if (sessionStorage.getItem('cart') == null)
 {
     EmptyCartAlert = document.createElement('p');
@@ -9,6 +8,7 @@ if (sessionStorage.getItem('cart') == null)
 }
 else
 {
+    //IF SESSIONSTOARGE DOESN'T EXIST MEANS CLIENT HAS PRODUCTS IN CART AND LOOPS THROUGH LISTING THEM TO CLIENT (CM)
     BasketList = sessionStorage.getItem('cart');
     AmountOfProducts = BasketList.split(',').length;
 

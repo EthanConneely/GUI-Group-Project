@@ -1,9 +1,11 @@
+/* STYLE FOR PROCEED TO CHECKOUT BUTTON (CM) */
 #ProceedToCheckoutButton {
     padding: 10px;
     margin: 10px;
     font-variant: all-petite-caps;
 }
 
+/* STYLE FOR CHECKOUT FORM (CM) */
 #CheckoutForm {
     display:none;
     top: 15%;
@@ -14,6 +16,7 @@
     width: 80%;
 }
 
+/* STYLE FOR HTML ELEMENT FIELDSET (CM) */
 fieldset {
     width: 70%;
     height: 600px;
@@ -27,6 +30,7 @@ fieldset {
     overflow: auto;
 }
 
+/* STYLE FOR FIELDSET, INPUT AND SELECT INPUTS (CM) */
 fieldset input, select {
     padding: 10px;
     font-variant: all-petite-caps;
@@ -34,11 +38,13 @@ fieldset input, select {
     width:90%
 }
 
+/* SETING THE FONT FOR EVERY ELEMENT ON THE WEBSITE (CM) */
 * {
     font-family: Helvetica, sans-serif;
     font-weight: 300;
 }
 
+/* STYLE FOR BUTTON ON HOME PAGE (CM) */
 #RemoveItemButton {
     background: red;
     width: 50px;
@@ -55,6 +61,7 @@ fieldset input, select {
 
 }
 
+/* STYLE FOR PRE IMAGE ON CART PAGE (CM) */
 #CartPreImage {
     width: 50px;
     height: 50px;
@@ -62,18 +69,21 @@ fieldset input, select {
     border-radius: 5px;
 }
 
+/* STYLE FOR LIST OF ITEMS IN BASKET PAGE (CM) */
 #BasketProductList {
     margin: 10px;
     padding: 0px;
     background: whitesmoke;
 }
 
+/* GENERAL STYLE FOR BODY ELEMENT (CM) */
 body, html {
     margin: 0;
     padding: 0;
     background: whitesmoke;
 }
 
+/* STYLE FOR ELEMENT TEXTCONTENT (CM) */
 #TextContent {
     margin: 30px;
 }
@@ -194,12 +204,14 @@ tr:nth-child(even) {
     background-color: #dddddd;
 }
 
+/* STYLE FOR CART SUB TOTAL (CM) */
 #CartSubTotal {
     color: green;
     font-weight: 900;
     font-variant: all-petite-caps;
 }
 
+/* STYLE ONLY APPLICABLE IF USER IS ON DESKTOP (CM) */
 @media only screen and (min-width: 600px) {
     #RightFormDiv{
         float:right;
@@ -216,6 +228,7 @@ tr:nth-child(even) {
     
 }
 
+/* STYLE FOR EXIT BUTTON ON RECEIPT PAGE (CM) */
 #FieldsetExitButton{
     color:white;
     background-color: orangered;

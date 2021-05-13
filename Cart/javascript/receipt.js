@@ -1,6 +1,7 @@
-//Logic for creating receipt
+//CREATES FUNCITON CALLED CREATE RECEIEPT - Logic for creating receipt (CM)
 function CreateReceipt(){
 
+    // CREATES VARIABLE AND APPENDS WITH INFORMATION ABOUT THE CLIENT AND PRODUCTS THEY'VE IN THEIR BASKETS(CM)
     Receipt = 'Reciept for user session : ' + sessionStorage.getItem('Email') + '\n';
     Receipt = Receipt + 'CUSTOMER :  ' + document.getElementById('FnameInput').value + ' ' + document.getElementById('LnameInput').value + '\n';
     Receipt = Receipt + 'DELIVER TO :  ' + document.getElementById('ShippingAddressInput').value + '\n';
@@ -15,6 +16,7 @@ function CreateReceipt(){
 
         //list products#
         for(i = 0; i < document.getElementsByTagName('tr').length; i++){
+            //READS HTML TABLE - TURNS HTML INTO RAW TEXT AND REPLACES HTML TAGS WITH NOTHING - THEN WE HAVE OUR ITEMS IN OUR TABLE(CM)
             ItemName = document.getElementsByTagName('tr')[i].childNodes[0].innerHTML.replace('<p>','').replace('</p>','');
             ItemCost = document.getElementsByTagName('tr')[i].childNodes[1].innerHTML.replace('<p>','').replace('</p>','');
 
@@ -36,6 +38,7 @@ function CreateReceipt(){
         }
     }
 
+    //SETS STYLE OF HTML ELEMENT - CHANGES CSS(CM)
     document.getElementById('CartContainer').setAttribute('style','display:none;');
 
     ThanksMessage = document.createElement('H1');
@@ -46,6 +49,7 @@ function CreateReceipt(){
     SubHeading.innerHTML = 'View your purchase below';
     ReceiptMessage.innerHTML = Receipt;
 
+    //APPENDS CREATED HTML ELEMENTS TO HTML ELEMENT RECIEPTCONTAINER (CM)
     document.getElementById('ReceiptContainer').appendChild(ThanksMessage);
     document.getElementById('ReceiptContainer').appendChild(SubHeading);
     document.getElementById('ReceiptContainer').appendChild(ReceiptMessage);
