@@ -63,10 +63,10 @@
         <hr>
 
         <fieldset id="CheckoutForm">
-            <input type="submit" onclick="HideCheckout()" value="X" />
-            <hr>
+            <input type="submit" onclick="HideCheckout()" id="FieldsetExitButton" value="X" />
                 <h1>Checkout</h1>
-
+                <hr>
+                <div id="LeftFormDiv">
                 <label>Title : </label> <br />
                 <select id="TitleInput" >
                     <option>-- --</option>
@@ -84,8 +84,9 @@
                 <label>Phone Number</label> <br />
                 <input type="number" id="PnumberInput"/> <br /> <br />
 
+            </div>
+            <div id="RightFormDiv">
                 <br />
-                <hr><br />
 
                 <h2>Shipping Address</h2> <br />
 
@@ -98,6 +99,7 @@
                 <br /><br />
 
                 <input type="submit" value="Purchase" onclick="CreateReceipt()" />
+            </div>
         </fieldset>
 
         <h1 id="CartSubTotal"></h1> <br />
