@@ -24,6 +24,7 @@
 /* Slide info text centering (EC) */
 .slideText {
     width: 100%;
+    margin: 0 5px;
     display: inherit;
     float: right;
     text-align: center;
@@ -56,6 +57,16 @@
     font-weight: 900;
 }
 
+
+/* Mobile slideshow discription (EC) */
+.slideInfo {
+    display: inherit;
+    width: 40%;
+    height: 100%;
+    padding: 5%;
+    float: right;
+}
+
 /* Highlight button on hover (EC) */
 .slideButton:hover {
     background-color: rgb(163, 163, 163);
@@ -78,13 +89,9 @@
         right: -20px;
     }
 
-    /* Desktop slideshow discription (EC) */
-    .slideInfo {
-        display: inherit;
-        width: 40%;
-        height: 100%;
-        padding: 10%;
-        float: right;
+    /* Slide info text centering (EC) */
+    .slideText {
+        margin: 15px 0;
     }
 }
 
@@ -110,21 +117,8 @@
         right: -20px;
     }
 
-    /* Desktop slideshow discription (EC) */
-    .slideInfo {
-        display: inherit;
-        width: 40%;
-        height: 100%;
-        padding: 10%;
-        float: right;
+    /* Slide info text centering (EC) */
+    .slideText {
+        margin: 20px 0;
     }
-}
-
-/* Mobile slideshow discription (EC) */
-.slideInfo {
-    display: inherit;
-    width: 40%;
-    height: 100%;
-    padding: 5%;
-    float: right;
 }
